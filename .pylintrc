@@ -1,0 +1,19 @@
+[MASTER]
+ignore=test
+
+max-line-length=120
+
+[MESSAGES CONTROL]
+
+disable=
+    C0103, # Variable doesn't conform to snake_case naming style (invalid-name)
+    E0611, # No name 'BaseModel' in module 'pydantic' (no-name-in-module)
+    W0718, # Catching too general exception Exception (broad-exception-caught)
+    R0903, # Too few public methods (1/2) (too-few-public-methods)
+    C0209, # Formatting a regular string which could be a f-string (consider-using-f-string)
+    C0114, # Missing module docstring (missing-module-docstring)
+    C0115, # Missing class docstring (missing-class-docstring)
+    W1203, # Use lazy % formatting in logging functions (logging-fstring-interpolation)
+    W0719, # Raising too general exception: Exception (broad-exception-raised)
+    R0902, # Too many instance attributes
+    W0106, # is assigned to nothing

@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+*_cache
+alembic/
+
+# Virtual environments
+.venv
+.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs
+*logs
+*.log
+
+# other
+*delete*

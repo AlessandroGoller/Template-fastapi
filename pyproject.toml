@@ -1,0 +1,99 @@
+[project]
+name = "parknest"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.15.2",
+    "asyncpg>=0.30.0",
+    "fastapi[standard]>=0.115.12",
+    "firebase-admin>=6.8.0",
+    "loguru>=0.7.3",
+    "pydantic>=2.11.4",
+    "pydantic-settings>=2.9.1",
+    "pyrebase4>=4.8.0",
+    "setuptools>=80.3.1",
+    "sqlalchemy>=2.0.40",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pip-audit>=2.9.0",
+    "pylint>=3.3.7",
+    "ruff>=0.11.8",
+    "vermin>=1.6.0",
+]
+
+
+[tool.ruff]
+
+lint.select = [
+    "E",
+    "F",
+    "W",
+    "I",
+    "B",
+    "N",
+    "A",
+    "C4",
+    "C9",
+    "Q",
+    "ARG",
+    "PD",
+    "NPY",
+    "ERA",
+    "COM",
+    "TID251",
+    ]
+
+lint.ignore = [
+    "B008", # B008 Do not perform function call `Header` in argument defaults
+    ]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+# fixable = ["A", "B", "C", "D", "E", "F", "..."]
+lint.unfixable = []
+lint.per-file-ignores = {}
+
+# Allow unused variables when underscore-prefixed.
+lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    "alembic/*",
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "*env",
+    "env/",
+    "*test*",
+]
+
+line-length = 120
+# black use 88
+# flake8 120
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 12
